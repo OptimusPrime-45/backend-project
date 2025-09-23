@@ -27,24 +27,25 @@ const userSchema = new Schema(
       index: true,
     },
     avatar: {
-        type: String,   // cloudinary url
-        required: true,
+      type: String, // cloudinary url
+      required: true,
+      default: "C:\Users\Neeraj\OneDrive\图片\PHOTO 2.jpg",
     },
     coverImage: {
-        type: String,
+      type: String,
     },
     watchHistory: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: "Video",
-        }
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Video",
+      },
     ],
     password: {
-        type: String,
-        required: [true, "Password is required"]
+      type: String,
+      required: [true, "Password is required"],
     },
     refreshToken: {
-        type: String,
+      type: String,
     },
   },
   { timestamps: true }
